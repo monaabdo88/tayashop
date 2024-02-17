@@ -8,7 +8,7 @@
                     <div class="card-header border-0">
                         <div class="card-title text-center">
                             <div class="p-1">
-                                <img src="{{asset('assets/front/images/logo.png')}}" alt="LOGO"/>
+                                <img src="{{asset('assets/admin/images/logo/logo.png')}}" alt="LOGO"/>
 
                             </div>
                         </div>
@@ -20,7 +20,7 @@
                     @include('admin.includes.alerts.success')
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form-horizontal form-simple" action="{{route('admin.login')}}" method="post"
+                            <form class="form-horizontal form-simple" action="{{route('cp.login')}}" method="post"
                                   novalidate>
                                 @csrf
                                 <fieldset class="form-group position-relative has-icon-left mb-0">
