@@ -17,6 +17,20 @@ Route::group(['middleware'  => 'auth:admin'], function()
     Route::get('/',[DashboardController::class , 'index'])->name('cp.index');
     ###################### Langs Routes #############################
     Route::group(['prefix'=> 'languages'],function(){
+        /*Route::resource('/', LanguagesController::class)->names([
+            'index'         => 'cp.languages',
+            'create'        => 'cp.languages.create',
+            'store'         => 'cp.languages.store',
+            'create'        => 'cp.languages.edit',
+            'update/{id}'   => 'cp.languages.update',
+            'destroy'       => 'cp.languages.delete'
+        ]);*/
         Route::get('/',[LanguagesController::class,'index'])->name('cp.languages');
+        Route::get('/create',[LanguagesController::class,'create'])->name('cp.languages.create');
+        Route::post('/store',[LanguagesController::class,'store'])->name('cp.languages.store');
+        Route::get('/edit/{id}',[LanguagesController::class,'edit'])->name('cp.languages.edit');
+        Route::put('/update/{id}',[LanguagesController::class,'update'])->name('cp.languages.update');
+        Route::get('/delete/{id}',[LanguagesController::class,'destroy'])->name('cp.languages.delete');
+
     });
 });

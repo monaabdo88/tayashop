@@ -1,5 +1,5 @@
 @extends('admin.layouts.login')
-@section('title','الدخول')
+@section('title','تسجيل الدخول')
 @section('content')
     <section class="flexbox-container">
         <div class="col-12 d-flex align-items-center justify-content-center">

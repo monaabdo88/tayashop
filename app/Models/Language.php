@@ -21,4 +21,9 @@ class Language extends Model
     {
         return $query->select('id','abbr', 'name', 'direction', 'active');
     }
+    //Get Active Lanugage
+    public function getActive()
+    {
+        return   $this -> active == 1 ? 'مفعل'  : 'غير مفعل';
+    }
 }
